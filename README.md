@@ -1,7 +1,7 @@
-Application for working with labyrinths and caves.
+Application for working with maze and caves.
 
-### Working with labyrinths
-- import and export of labyrinths
+### Working with maze
+- import and export of maze
 - solving the maze using the wave tracing algorithm
 - generation of an ideal labyrinth using the Eller algorithm
 
