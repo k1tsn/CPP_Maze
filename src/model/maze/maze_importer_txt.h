@@ -5,7 +5,7 @@
 
 #include "maze.h"
 #include "maze_importer.h"
-#include "token_parser.h"
+#include "string_parser.h"
 
 namespace mc {
 
@@ -20,7 +20,7 @@ class MazeImporterTXT : public MazeImporter {
 
  private:
   ReturnCode FillMatrix(Maze::MazeWallMatrix& matrix, size_t rows,
-                        size_t columns, TokenParser::Parser& token_parser,
+                        size_t columns, TokenParser::StringParser& token_parser,
                         std::ifstream& input_file);
 
   const size_t max_size_ = 50;

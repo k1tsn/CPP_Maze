@@ -48,7 +48,7 @@
      </size>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="tab_maze">
      <attribute name="title">
@@ -172,7 +172,7 @@
        </widget>
       </item>
       <item row="0" column="0" rowspan="7">
-       <widget class="s21::WidgetMaze" name="widget_maze" native="true">
+       <widget class="mc::WidgetMaze" name="widget_maze" native="true">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
           <horstretch>0</horstretch>
@@ -658,7 +658,7 @@
        </widget>
       </item>
       <item row="0" column="0" rowspan="10">
-       <widget class="s21::WidgetCave" name="widget_cave" native="true">
+       <widget class="mc::WidgetCave" name="widget_cave" native="true">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
           <horstretch>0</horstretch>
@@ -1013,16 +1013,15 @@
  </widget>
  <customwidgets>
   <customwidget>
-   <class>s21::WidgetMaze</class>
-   <extends>QWidget</extends>
-   <header>view/qt_view/widget_maze.h</header>
-   <container>1</container>
-  </customwidget>
-  <customwidget>
-   <class>s21::WidgetCave</class>
+   <class>mc::WidgetCave</class>
    <extends>QWidget</extends>
    <header>view/qt_view/widget_cave.h</header>
    <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>mc::WidgetMaze</class>
+   <extends>QWidget</extends>
+   <header>view/qt_view/widget_maze.h</header>
   </customwidget>
  </customwidgets>
  <resources/>

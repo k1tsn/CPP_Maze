@@ -7,7 +7,7 @@
 
 #include "cave.h"
 #include "cave_importer.h"
-#include "token_parser.h"
+#include "string_parser.h"
 
 namespace mc {
 
@@ -20,7 +20,7 @@ CaveImporterTXT::ReturnCode CaveImporterTXT::Import(const std::string& filename,
   std::ifstream file(filename);
   if (file.fail()) return kCodeFileDontOpen;
 
-  TokenParser::Parser token_parser;
+  TokenParser::StringParser token_parser;
   std::string str;
   if (!std::getline(file, str)) return kCodeInvalidFile;
 

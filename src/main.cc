@@ -7,9 +7,9 @@
 #include "view/view.h"
 
 int main(int argc, char** argv) {
-  s21::Model* model = new s21::Model();
-  s21::Controller* controller = new s21::ControllerDefault(model);
-  s21::View* view = new s21::QTView(argc, argv, controller);
+  mc::Model* model = new mc::Model();
+  mc::Controller* controller = new mc::ControllerDefault(model);
+  mc::View* view = new mc::QTView(argc, argv, controller);
 
   int code = view->Exec();
 

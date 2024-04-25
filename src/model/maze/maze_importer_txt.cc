@@ -3,7 +3,7 @@
 #include <fstream>
 
 #include "maze.h"
-#include "token_parser.h"
+#include "string_parser.h"
 
 namespace mc {
 
@@ -13,7 +13,7 @@ MazeImporterTXT::ReturnCode MazeImporterTXT::Import(const std::string& filename,
   if (input_file.fail()) return ReturnCode::kCodeFileIsNotOpen;
 
   std::string line;
-  TokenParser::Parser token_parser;
+  TokenParser::StringParser token_parser;
   if (!std::getline(input_file, line)) return kCodeInvalidFile;
 
   token_parser.SetStr(&line);
@@ -48,7 +48,7 @@ MazeImporterTXT::ReturnCode MazeImporterTXT::Import(const std::string& filename,
 
 MazeImporterTXT::ReturnCode MazeImporterTXT::FillMatrix(
     Maze::MazeWallMatrix& matrix, size_t rows, size_t columns,
-    TokenParser::Parser& token_parser, std::ifstream& input_file) {
+    TokenParser::StringParser& token_parser, std::ifstream& input_file) {
   std::string line;
   for (size_t i = 0; i < rows; ++i) {
     if (!std::getline(input_file, line)) return ReturnCode::kCodeInvalidFile;
